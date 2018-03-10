@@ -2,11 +2,12 @@
 
 import React from 'react';
 import { Text, AppRegistry } from 'react-native';
+import Header from './src/components/header';
 
 //Create a component
 
 const App = () => (
-    <Text> Some Text </Text>
+    <Header />
 );
 
 //render it to the device
