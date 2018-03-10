@@ -9,13 +9,15 @@ import { Text , View } from 'react-native';
 
 
 // Make a component
-const Header = () => {
+const Header = (props) => {
+
+    console.log('hello world');
 
     const { textStyle , viewStyle } = styles;
 
     return (
         <View style={viewStyle}>
-            <Text style={textStyle}> Header </Text>
+            <Text style={textStyle}> {props.headerText} </Text>
         </View>
     );
 }
@@ -25,12 +27,15 @@ const Header = () => {
 const styles = {
     viewStyle: {
         backgroundColor: '#F8F8F8',
-        justifyCOntent: 'center',
+        justifyContent: 'center',
         alignItems: 'center',
         height: 60,
         paddingTop: 5,
         marginTop: 16,
-        paddingBottom: 5
+        paddingBottom: 5,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2
     },
     textStyle: {
         fontSize: 20
