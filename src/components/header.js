@@ -3,15 +3,13 @@
 //Import libraries for making a component
 import React from 'react';
 import { Text , View } from 'react-native';
-
+import axios from 'axios';
 
 //define the styling
 
 
 // Make a component
 const Header = (props1) => {
-
-    console.log('hello world');
 
     const { textStyle , viewStyle } = styles;
 
