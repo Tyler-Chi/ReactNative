@@ -1,6 +1,7 @@
 import React , { Component } from 'react';
 import { View, Text , ListView} from 'react-native';
 import axios from 'axios';
+import AlbumListItem from './AlbumListItem';
 
 
 class AlbumList extends React.Component {
@@ -19,19 +20,27 @@ class AlbumList extends React.Component {
         
     }
 
+    renderAlbums(){
+
+        return (
+
+            this.state.albums.map(album => (
+                <AlbumListItem album={album} key = {album.title}/>
+            ))
+
+        )
+    }
+
   
     render(){
 
-        console.log('in the render function');
-
-        console.log('length of albums:', this.state.albums.length);
-        
-        
-        
+        console.log('state', this.state);
 
         return (
             <View>
                 <Text > Album List!!! </Text>
+
+               {this.renderAlbums()}
               
             </View>
         );
