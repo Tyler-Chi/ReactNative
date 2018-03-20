@@ -29,6 +29,10 @@ class AlbumListItem extends React.Component {
                     <Text> {album.artist} </Text>
                 </View>
             </CardSection>
+
+            <CardSection>
+                <Image style={styles.albumImage} source={{uri: album.image}} />
+            </CardSection>
         </Card>
 
         );
@@ -47,6 +51,12 @@ const styles = {
     thumbNail: {
         height: 50,
         width: 50
+    },
+    albumImage: {
+    height: 300,
+    flex: 1,
+    width: null
+
     }
 }
 
