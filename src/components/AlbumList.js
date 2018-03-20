@@ -38,7 +38,7 @@ class AlbumList extends React.Component {
 
         return (
             <View>
-                <Text > Album List!!! </Text>
+                <Text > Album List ??? </Text>
 
                {this.renderAlbums()}
               
