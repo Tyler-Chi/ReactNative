@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
+
 
 class AlbumListItem extends React.Component {
 
@@ -33,6 +35,10 @@ class AlbumListItem extends React.Component {
             <CardSection>
                 <Image style={styles.albumImage} source={{uri: album.image}} />
             </CardSection>
+
+            <CardSection>
+                <Button />
+            </CardSection>
         </Card>
 
         );
@@ -53,9 +59,9 @@ const styles = {
         width: 50
     },
     albumImage: {
-    height: 300,
-    flex: 1,
-    width: null
+        height: 300,
+        flex: 1,
+        width: null
 
     }
 }
