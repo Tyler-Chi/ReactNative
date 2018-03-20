@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image , Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import Button from './Button';
@@ -11,6 +11,8 @@ class AlbumListItem extends React.Component {
         super(props);
         this.state = {};
     }
+
+ 
 
     render(){
 
@@ -37,7 +39,10 @@ class AlbumListItem extends React.Component {
             </CardSection>
 
             <CardSection>
-                <Button />
+                <Button 
+                onPress={() => Linking.openURL(album.url)}
+                info={album}
+                />
             </CardSection>
         </Card>
 

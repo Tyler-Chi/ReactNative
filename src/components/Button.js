@@ -1,13 +1,23 @@
 import React from 'react';
-import { Text , TouchableOpacity} from 'react-native';
+import { Text , TouchableOpacity } from 'react-native';
 
-const Button = () => {
+const Button = (props) => {
 
-    const { buttonStyle , textStyle} = styles;
+    const { buttonStyle , textStyle } = styles;
+
+    console.log('button information is', props.info);
+    
 
     return (
-        <TouchableOpacity style={buttonStyle}>
-            <Text style={textStyle}> Click Me!!! </Text>
+        <TouchableOpacity 
+            style={buttonStyle}
+            onPress={props.onPress}
+            >
+            <Text 
+                style={textStyle}
+            > 
+                {props.info.title}
+            </Text>
         </TouchableOpacity>
     )
 };
